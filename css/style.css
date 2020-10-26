@@ -1,0 +1,73 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#prev, #next, #today {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Courier new, monospace;
+  font-size: 14px;
+}
+
+body table {
+  border-collapse: collapse;
+  border: 2px solid #eeeeee;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+body table thead {
+  background-color: #eeeeee;
+}
+
+body table thead th {
+  text-align: center;
+  padding: 8px;
+}
+
+body table thead td {
+  text-align: center;
+  padding: 8px;
+}
+
+body table tbody th {
+  text-align: center;
+  padding: 8px;
+}
+
+body table tbody td {
+  text-align: center;
+  padding: 8px;
+}
+
+body table tbody td.disabled {
+  opacity: 0.3;
+}
+
+body table tbody td.today {
+  font-weight: bold;
+}
+
+body table tbody td:first-child {
+  color: red;
+}
+
+body table tbody td:last-child {
+  color: blue;
+}
+
+body table tfoot {
+  background-color: #eeeeee;
+  text-align: center;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

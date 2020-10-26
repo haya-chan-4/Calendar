@@ -1,0 +1,69 @@
+$bc: #eeeeee;
+@mixin th-td {
+  text-align: center;
+  padding: 8px;
+}
+@mixin cursor {
+  cursor: pointer;
+  user-select: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+#prev, #next, #today {
+  @include cursor;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Courier new, monospace;
+  font-size: 14px;
+
+  table {
+    border-collapse: collapse;
+    border: 2px solid #eeeeee;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    thead {
+      background-color: $bc;
+
+      th {
+        @include th-td;
+      }
+      td {
+        @include th-td
+      }
+    }
+
+    tbody {
+      th {
+        @include th-td;
+      }
+      td {
+        @include th-td;
+        &.disabled {
+          opacity: 0.3;
+        }
+        &.today {
+          font-weight: bold;
+        }
+        &:first-child {
+          color: red;
+        }
+        &:last-child {
+          color: blue;
+        }
+      }
+    }
+
+    tfoot {
+      background-color: $bc;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
